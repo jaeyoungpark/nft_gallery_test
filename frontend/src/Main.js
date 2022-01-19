@@ -50,6 +50,10 @@ function Main() {
     }
   }, []);
 
+
+  console.log('authState:');
+  console.log(authState)
+
   return (
     <>
       <Header />

@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Button, Input } from 'antd'
 import { AwsContext } from '../context/AwsProvider';
+import Viewer from './viewer';
 
 function Dashboard() {
   const { awsClient } = React.useContext(AwsContext);
   const [state, setState] = useState({ data: '' });
+  const [showGallery, setGallery] = useState(false);
 
   useEffect(() => {
     const fetchHelloAPI = async () => {
@@ -25,13 +27,18 @@ function Dashboard() {
 
   async function savePhoto() {
   }
+
+  function toggleGallery() {
+    setGallery(!showGallery);
+  }
   
   return (
     <div className='home'>
       <div className='content'>
-        <h1>{state.data}</h1>        
+        { !showGallery && <h1>{state.data}</h1> }
+        { showGallery && <Viewer></Viewer> }
       </div>
-    <Button style={button} type="primary" onClick={savePhoto}>View Gallery</Button>
+    <Button style={button} type="primary" onClick={toggleGallery}>View Gallery</Button>
     </div>
   );
 }
