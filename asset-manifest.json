@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/nftviewer/static/css/main.a19ea5c4.chunk.css",
-    "main.js": "/nftviewer/static/js/main.58b16a95.chunk.js",
-    "main.js.map": "/nftviewer/static/js/main.58b16a95.chunk.js.map",
-    "runtime-main.js": "/nftviewer/static/js/runtime-main.0d693006.js",
-    "runtime-main.js.map": "/nftviewer/static/js/runtime-main.0d693006.js.map",
-    "static/js/2.625b4bec.chunk.js": "/nftviewer/static/js/2.625b4bec.chunk.js",
-    "static/js/2.625b4bec.chunk.js.map": "/nftviewer/static/js/2.625b4bec.chunk.js.map",
-    "static/js/3.60379361.chunk.js": "/nftviewer/static/js/3.60379361.chunk.js",
-    "static/js/3.60379361.chunk.js.map": "/nftviewer/static/js/3.60379361.chunk.js.map",
-    "index.html": "/nftviewer/index.html",
-    "static/css/main.a19ea5c4.chunk.css.map": "/nftviewer/static/css/main.a19ea5c4.chunk.css.map",
-    "static/js/2.625b4bec.chunk.js.LICENSE.txt": "/nftviewer/static/js/2.625b4bec.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/nftviewer/static/media/logo.6ce24c58.svg"
+    "main.css": "/nft_gallery_test/static/css/main.a19ea5c4.chunk.css",
+    "main.js": "/nft_gallery_test/static/js/main.58b16a95.chunk.js",
+    "main.js.map": "/nft_gallery_test/static/js/main.58b16a95.chunk.js.map",
+    "runtime-main.js": "/nft_gallery_test/static/js/runtime-main.8d4ddb99.js",
+    "runtime-main.js.map": "/nft_gallery_test/static/js/runtime-main.8d4ddb99.js.map",
+    "static/js/2.b1926573.chunk.js": "/nft_gallery_test/static/js/2.b1926573.chunk.js",
+    "static/js/2.b1926573.chunk.js.map": "/nft_gallery_test/static/js/2.b1926573.chunk.js.map",
+    "static/js/3.60379361.chunk.js": "/nft_gallery_test/static/js/3.60379361.chunk.js",
+    "static/js/3.60379361.chunk.js.map": "/nft_gallery_test/static/js/3.60379361.chunk.js.map",
+    "index.html": "/nft_gallery_test/index.html",
+    "static/css/main.a19ea5c4.chunk.css.map": "/nft_gallery_test/static/css/main.a19ea5c4.chunk.css.map",
+    "static/js/2.b1926573.chunk.js.LICENSE.txt": "/nft_gallery_test/static/js/2.b1926573.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/nft_gallery_test/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.0d693006.js",
-    "static/js/2.625b4bec.chunk.js",
+    "static/js/runtime-main.8d4ddb99.js",
+    "static/js/2.b1926573.chunk.js",
     "static/css/main.a19ea5c4.chunk.css",
     "static/js/main.58b16a95.chunk.js"
   ]
