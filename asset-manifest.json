@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/nftviewer/static/css/main.a19ea5c4.chunk.css",
+    "main.js": "/nftviewer/static/js/main.58b16a95.chunk.js",
+    "main.js.map": "/nftviewer/static/js/main.58b16a95.chunk.js.map",
+    "runtime-main.js": "/nftviewer/static/js/runtime-main.0d693006.js",
+    "runtime-main.js.map": "/nftviewer/static/js/runtime-main.0d693006.js.map",
+    "static/js/2.625b4bec.chunk.js": "/nftviewer/static/js/2.625b4bec.chunk.js",
+    "static/js/2.625b4bec.chunk.js.map": "/nftviewer/static/js/2.625b4bec.chunk.js.map",
+    "static/js/3.60379361.chunk.js": "/nftviewer/static/js/3.60379361.chunk.js",
+    "static/js/3.60379361.chunk.js.map": "/nftviewer/static/js/3.60379361.chunk.js.map",
+    "index.html": "/nftviewer/index.html",
+    "static/css/main.a19ea5c4.chunk.css.map": "/nftviewer/static/css/main.a19ea5c4.chunk.css.map",
+    "static/js/2.625b4bec.chunk.js.LICENSE.txt": "/nftviewer/static/js/2.625b4bec.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/nftviewer/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0d693006.js",
+    "static/js/2.625b4bec.chunk.js",
+    "static/css/main.a19ea5c4.chunk.css",
+    "static/js/main.58b16a95.chunk.js"
+  ]
+}
