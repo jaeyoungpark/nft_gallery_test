@@ -1,12 +1,14 @@
 import React, { useContext } from 'react';
 import { AwsClient } from 'aws4fetch';
 
-import './App.css';
-import Login from './components/login';
 import Dashboard from './components/dashboard';
+import Feed from './components/feed';
+
 import Header from './components/header';
 import { AuthContext } from './context/AuthProvider';
 import { AwsContext } from './context/AwsProvider';
+
+import './App.css';
 
 function Main() {
   const { authState, dispatch } = useContext(AuthContext);
@@ -58,7 +60,7 @@ function Main() {
     <>
       <Header />
       <div className='app-container'>
-        {!authState.isAuthenticated ? <Login /> : <Dashboard />}
+        <Feed />
       </div>
     </>
   );
