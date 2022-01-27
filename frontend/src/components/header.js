@@ -13,7 +13,9 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 
+import { AuthButton, AuthType } from './authButton'
 import { AuthContext } from '../context/AuthProvider';
+import { WalletAddress } from './walletAddress';
 
 export const Header = () => {
   const { authState, dispatch } = React.useContext(AuthContext);
@@ -21,7 +23,6 @@ export const Header = () => {
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const pages = [];
-  const settings = ['Profile', 'Logout'];
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -41,7 +42,7 @@ export const Header = () => {
   const logo = 'nftVerse'
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" position="sticky">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -53,6 +54,7 @@ export const Header = () => {
             {logo}
           </Typography>
 
+          {/* Hamburger menu icon for mobile devices.  Set xs: 'flex' to enable */}
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'none' } }}>
             <IconButton
               size="large"
@@ -109,6 +111,11 @@ export const Header = () => {
             ))}
           </Box>
 
+          { !authState.isAuthenticated && 
+            <AuthButton authType={AuthType.Login}>Login</AuthButton>
+          }
+
+          { authState.isAuthenticated && 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
@@ -131,13 +138,17 @@ export const Header = () => {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+              <MenuItem onClick={handleCloseUserMenu}>
+                <Typography textAlign="center">Profile (<WalletAddress address={authState.address} />)</Typography>
+              </MenuItem>
+              <AuthButton authType={AuthType.Logout}>
+                <MenuItem>
+                  <Typography textAlign="center">Logout</Typography>
                 </MenuItem>
-              ))}
+              </AuthButton>
             </Menu>
           </Box>
+          }
         </Toolbar>
       </Container>
     </AppBar>
