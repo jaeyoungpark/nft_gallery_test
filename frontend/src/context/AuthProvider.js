@@ -4,16 +4,17 @@ export const AuthContext = React.createContext();
 
 const initialState = {
   isAuthenticated: false,
-  Address: null,
-  SessionToken: null,
-  AccessKeyId: null,
-  SecretKey: null,
-  Expiration: null,
+  address: null,
+  sessionToken: null,
+  accessKeyId: null,
+  secretKey: null,
+  expiration: null,
 };
 
 const reducer = (state, action) => {
   switch (action.type) {
     case 'LOGIN':
+      console.log('login on reducer')
       localStorage.setItem('address', JSON.stringify(action.payload.address));
       localStorage.setItem(
         'sessionToken',
@@ -37,7 +38,7 @@ const reducer = (state, action) => {
         address: action.payload.address,
         sessionToken: action.payload.sessionToken,
         accessKeyId: action.payload.accessKeyId,
-        SecretKey: action.payload.secretKey,
+        secretKey: action.payload.secretKey,
         expiration: action.payload.expiration,
       };
     case 'LOGOUT':

@@ -20,13 +20,15 @@ interface ExpandMoreProps extends IconButtonProps {
     expand: boolean;
 }
 
-interface PostCardProps {
+export interface PostCardProps {
    owner: string;
-   ownerProfile: string;
+   ownerAddress: string;
+   ownerProfileImageUrl: string;
    collection: string;
    message: string;
+   imageUrl: string;
    likes: number;
-   sx: SxProps;
+   sx?: SxProps;
 }
 
 const ExpandMore = styled((props: ExpandMoreProps) => {
@@ -40,35 +42,32 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
     }),
 }));
 
-export default function PostCard(props: PostCardProps) {
+export function PostCard(props: PostCardProps) {
     const [expanded, setExpanded] = React.useState(false);
 
     const handleExpandClick = () => {
         setExpanded(!expanded);
     };
 
-    const { owner, ownerProfile, collection, message, likes} = props;
+    const { owner, ownerAddress, ownerProfileImageUrl, collection, message, imageUrl, likes} = props;
 
     return (
         <Card sx={{ marginLeft: 'auto', marginRight: 'auto', maxWidth: 345, ...props.sx }}>
             <CardHeader
                 avatar={
-                    <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-                        { ownerProfile }
-                    </Avatar>
+                    <Avatar src={ownerProfileImageUrl} sx={{ bgcolor: red[500] }} aria-label="recipe"></Avatar>
                 }
                 action={
                     <IconButton aria-label="settings">
                         <MoreVertIcon />
                     </IconButton>
                 }
-                title={ owner }
+                title={ owner || ownerAddress }
                 subheader={ collection }
             />
             <CardMedia
                 component="img"
-                height="194"
-                image="/static/images/cards/paella.jpg"
+                image={ imageUrl }
                 alt="Paella dish"
             />
             <CardContent>
