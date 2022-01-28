@@ -1,8 +1,9 @@
 import React, { useContext } from 'react';
 import { AwsClient } from 'aws4fetch';
 
-import Dashboard from './components/dashboard';
 import Feed from './components/feed';
+import Profile from './components/profile';
+
 
 import Header from './components/header';
 import { AuthContext } from './context/AuthProvider';
@@ -60,7 +61,8 @@ function Main() {
     <>
       <Header />
       <div className='app-container'>
-        <Feed />
+        <Profile />
+        {/* <Feed /> */}
       </div>
     </>
   );
