@@ -23,6 +23,12 @@ interface AuthButtonProps {
   children?: JSX.Element,
 }
 
+declare global {
+  interface Window {
+    ethereum: any;
+  }
+}
+
 const isMetaMaskInstalled = () => {
   const { ethereum } = window;
   return Boolean(ethereum && ethereum.isMetaMask);
