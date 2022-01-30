@@ -1,9 +1,6 @@
 import React, { useContext } from 'react';
 import { AwsClient } from 'aws4fetch';
-
-import Feed from './components/feed';
-import Profile from './components/profile';
-
+import { Outlet } from 'react-router-dom';
 
 import Header from './components/header';
 import { AuthContext } from './context/AuthProvider';
@@ -61,7 +58,8 @@ function Main() {
     <>
       <Header />
       <div className='app-container'>
-        <Profile />
+        <Outlet />
+        {/* <Profile /> */}
         {/* <Feed /> */}
       </div>
     </>
